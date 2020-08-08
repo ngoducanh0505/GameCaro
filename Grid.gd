@@ -7,7 +7,6 @@ export (int) var x_start;
 export (int) var y_start;
 export (int) var offset;
 
-export (PackedScene) var X_Icon
 
 var game_array = [];
 

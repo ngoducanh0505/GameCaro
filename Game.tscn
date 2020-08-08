@@ -1,55 +1,324 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://1280x1024-px-landscape-690544-wallhere.com.jpg" type="Texture" id=1]
 [ext_resource path="res://unnamed.png" type="Texture" id=2]
-[ext_resource path="res://Grid.gd" type="Script" id=3]
 [ext_resource path="res://photo-2-1477555045881.png" type="Texture" id=4]
-[ext_resource path="res://X_Icon.tscn" type="PackedScene" id=5]
-[ext_resource path="res://O_Icon.tscn" type="PackedScene" id=6]
+[ext_resource path="res://SelectTableArea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://nenbutton.png" type="Texture" id=7]
 
 [node name="Game" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 1280.0
-margin_bottom = 900.0
+[node name="TextureRect" type="Sprite" parent="."]
+position = Vector2( 640, 448 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect"]
-margin_left = -2.66968
-margin_top = -2.66968
-margin_right = 442.33
-margin_bottom = 388.33
+[node name="TextureRect" type="Sprite" parent="TextureRect"]
+position = Vector2( -416, -248 )
 texture = ExtResource( 2 )
-stretch_mode = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Grid" type="Node2D" parent="."]
-script = ExtResource( 3 )
-width = 10
-height = 10
-x_start = 512
-y_start = 704
-offset = 64
-
-[node name="Banco" type="TextureRect" parent="."]
-margin_left = 512.0
-margin_top = 64.0
-margin_right = 1152.0
-margin_bottom = 709.0
+[node name="Banco" type="Sprite" parent="."]
+position = Vector2( 832, 384 )
 texture = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="X_Icon" parent="." instance=ExtResource( 5 )]
+[node name="POS0" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -288, -288 )
 
-[node name="Y_Icon" parent="." instance=ExtResource( 6 )]
+[node name="POS1" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -224, -288 )
+
+[node name="POS2" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -160, -288 )
+
+[node name="POS3" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -96.0001, -288 )
+
+[node name="POS4" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -32.0001, -288 )
+
+[node name="POS5" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 31.9999, -288 )
+
+[node name="POS6" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 95.9999, -288 )
+
+[node name="POS7" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 160, -288 )
+
+[node name="POS8" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 224, -288 )
+
+[node name="POS9" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 288, -288 )
+
+[node name="POS10" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -288, -224 )
+
+[node name="POS11" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -224, -224 )
+
+[node name="POS12" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -160, -224 )
+
+[node name="POS13" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -96.0001, -224 )
+
+[node name="POS14" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -32.0001, -224 )
+
+[node name="POS15" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 31.9999, -224 )
+
+[node name="POS16" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 95.9999, -224 )
+
+[node name="POS17" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 160, -224 )
+
+[node name="POS18" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 224, -224 )
+
+[node name="POS19" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 288, -224 )
+
+[node name="POS20" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -288, -160 )
+
+[node name="POS21" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -224, -160 )
+
+[node name="POS22" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -160, -160 )
+
+[node name="POS23" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -96.0001, -160 )
+
+[node name="POS24" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -32.0001, -160 )
+
+[node name="POS25" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 31.9999, -160 )
+
+[node name="POS26" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 95.9999, -160 )
+
+[node name="POS27" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 160, -160 )
+
+[node name="POS28" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 224, -160 )
+
+[node name="POS29" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 288, -160 )
+
+[node name="POS30" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -288, -96 )
+
+[node name="POS31" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -224, -96 )
+
+[node name="POS32" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -160, -96 )
+
+[node name="POS33" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -96.0001, -96 )
+
+[node name="POS34" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -32.0001, -96 )
+
+[node name="POS35" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 31.9999, -96 )
+
+[node name="POS36" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 95.9999, -96 )
+
+[node name="POS37" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 160, -96 )
+
+[node name="POS38" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 224, -96 )
+
+[node name="POS39" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 288, -96 )
+
+[node name="POS40" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -288, -32 )
+
+[node name="POS41" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -224, -32 )
+
+[node name="POS42" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -160, -32 )
+
+[node name="POS43" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -96.0001, -32 )
+
+[node name="POS44" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -32.0001, -32 )
+
+[node name="POS45" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 31.9999, -32 )
+
+[node name="POS46" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 95.9999, -32 )
+
+[node name="POS47" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 160, -32 )
+
+[node name="POS48" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 224, -32 )
+
+[node name="POS49" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 288, -32 )
+
+[node name="POS50" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -288, 32 )
+
+[node name="POS51" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -224, 32 )
+
+[node name="POS52" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -160, 32 )
+
+[node name="POS53" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -96.0001, 32 )
+
+[node name="POS54" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -32.0001, 32 )
+
+[node name="POS55" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 31.9999, 32 )
+
+[node name="POS56" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 95.9999, 32 )
+
+[node name="POS57" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 160, 32 )
+
+[node name="POS58" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 224, 32 )
+
+[node name="POS59" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 288, 32 )
+
+[node name="POS60" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -288, 96 )
+
+[node name="POS61" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -224, 96 )
+
+[node name="POS62" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -160, 96 )
+
+[node name="POS63" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -96.0001, 96 )
+
+[node name="POS64" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -32.0001, 96 )
+
+[node name="POS65" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 31.9999, 96 )
+
+[node name="POS66" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 95.9999, 96 )
+
+[node name="POS67" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 160, 96 )
+
+[node name="POS68" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 224, 96 )
+
+[node name="POS69" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 288, 96 )
+
+[node name="POS70" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -288, 160 )
+
+[node name="POS71" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -224, 160 )
+
+[node name="POS72" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -160, 160 )
+
+[node name="POS73" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -96.0001, 160 )
+
+[node name="POS74" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -32.0001, 160 )
+
+[node name="POS75" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 31.9999, 160 )
+
+[node name="POS76" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 95.9999, 160 )
+
+[node name="POS77" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 160, 160 )
+
+[node name="POS78" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 224, 160 )
+
+[node name="POS79" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 288, 160 )
+
+[node name="POS80" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -288, 224 )
+
+[node name="POS81" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -224, 224 )
+
+[node name="POS82" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -160, 224 )
+
+[node name="POS83" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -96.0001, 224 )
+
+[node name="POS84" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -32.0001, 224 )
+
+[node name="POS85" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 31.9999, 224 )
+
+[node name="POS86" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 95.9999, 224 )
+
+[node name="POS87" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 160, 224 )
+
+[node name="POS88" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 224, 224 )
+
+[node name="POS89" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 288, 224 )
+
+[node name="POS90" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -288, 288 )
+
+[node name="POS91" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -224, 288 )
+
+[node name="POS92" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -160, 288 )
+
+[node name="POS93" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -96.0001, 288 )
+
+[node name="POS94" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( -32.0001, 288 )
+
+[node name="POS95" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 31.9999, 288 )
+
+[node name="POS96" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 95.9999, 288 )
+
+[node name="POS97" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 160, 288 )
+
+[node name="POS98" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 224, 288 )
+
+[node name="POS99" parent="Banco" instance=ExtResource( 5 )]
+position = Vector2( 288, 288 )
 
 [node name="PlayWithPlayer" type="Button" parent="."]
 anchor_right = 100.0
