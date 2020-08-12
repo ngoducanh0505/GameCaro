@@ -26,7 +26,6 @@ func play_o():
 
 
 
-
 func _on_POS_input_event(viewport, event, shape_idx):
 	if(event is InputEventMouseButton):
 		if(event.button_index == BUTTON_LEFT):
@@ -37,3 +36,4 @@ func _on_POS_input_event(viewport, event, shape_idx):
 			play_o()
 			$mouse_over.hide()
 			selected = true
+
