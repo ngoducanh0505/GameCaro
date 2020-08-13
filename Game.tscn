@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://1280x1024-px-landscape-690544-wallhere.com.jpg" type="Texture" id=1]
 [ext_resource path="res://unnamed.png" type="Texture" id=2]
+[ext_resource path="res://Game.gd" type="Script" id=3]
 [ext_resource path="res://photo-2-1477555045881.png" type="Texture" id=4]
 [ext_resource path="res://SelectTableArea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://nenbutton.png" type="Texture" id=7]
 
 [node name="Game" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 640, 448 )
@@ -22,303 +24,403 @@ texture = ExtResource( 4 )
 
 [node name="POS0" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -288, -288 )
+pos = 0
 
 [node name="POS1" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -224, -288 )
+pos = 1
 
 [node name="POS2" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -160, -288 )
+pos = 2
 
 [node name="POS3" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -96.0001, -288 )
+pos = 3
 
 [node name="POS4" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -32.0001, -288 )
+pos = 4
 
 [node name="POS5" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 31.9999, -288 )
+pos = 5
 
 [node name="POS6" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 95.9999, -288 )
+pos = 6
 
 [node name="POS7" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 160, -288 )
+pos = 7
 
 [node name="POS8" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 224, -288 )
+pos = 8
 
 [node name="POS9" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 288, -288 )
+pos = 9
 
 [node name="POS10" parent="Grid" instance=ExtResource( 5 )]
-position = Vector2( -288, -224 )
+position = Vector2( -288, -218 )
+pos = 10
 
 [node name="POS11" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -224, -224 )
+pos = 11
 
 [node name="POS12" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -160, -224 )
+pos = 12
 
 [node name="POS13" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -96.0001, -224 )
+pos = 13
 
 [node name="POS14" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -32.0001, -224 )
+pos = 14
 
 [node name="POS15" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 31.9999, -224 )
+pos = 15
 
 [node name="POS16" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 95.9999, -224 )
+pos = 16
 
 [node name="POS17" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 160, -224 )
+pos = 17
 
 [node name="POS18" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 224, -224 )
+pos = 18
 
 [node name="POS19" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 288, -224 )
+pos = 19
 
 [node name="POS20" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -288, -160 )
+pos = 20
 
 [node name="POS21" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -224, -160 )
+pos = 21
 
 [node name="POS22" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -160, -160 )
+pos = 22
 
 [node name="POS23" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -96.0001, -160 )
+pos = 23
 
 [node name="POS24" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -32.0001, -160 )
+pos = 24
 
 [node name="POS25" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 31.9999, -160 )
+pos = 25
 
 [node name="POS26" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 95.9999, -160 )
+pos = 26
 
 [node name="POS27" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 160, -160 )
+pos = 27
 
 [node name="POS28" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 224, -160 )
+pos = 28
 
 [node name="POS29" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 288, -160 )
+pos = 29
 
 [node name="POS30" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -288, -96 )
+pos = 30
 
 [node name="POS31" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -224, -96 )
+pos = 31
 
 [node name="POS32" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -160, -96 )
+pos = 32
 
 [node name="POS33" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -96.0001, -96 )
+pos = 33
 
 [node name="POS34" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -32.0001, -96 )
+pos = 34
 
 [node name="POS35" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 31.9999, -96 )
+pos = 35
 
 [node name="POS36" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 95.9999, -96 )
+pos = 36
 
 [node name="POS37" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 160, -96 )
+pos = 37
 
 [node name="POS38" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 224, -96 )
+pos = 38
 
 [node name="POS39" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 288, -96 )
+pos = 39
 
 [node name="POS40" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -288, -32 )
+pos = 40
 
 [node name="POS41" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -224, -32 )
+pos = 41
 
 [node name="POS42" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -160, -32 )
+pos = 42
 
 [node name="POS43" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -96.0001, -32 )
+pos = 43
 
 [node name="POS44" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -32.0001, -32 )
+pos = 44
 
 [node name="POS45" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 31.9999, -32 )
+pos = 45
 
 [node name="POS46" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 95.9999, -32 )
+pos = 46
 
 [node name="POS47" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 160, -32 )
+pos = 47
 
 [node name="POS48" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 224, -32 )
+pos = 48
 
 [node name="POS49" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 288, -32 )
+pos = 49
 
 [node name="POS50" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -288, 32 )
+pos = 50
 
 [node name="POS51" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -224, 32 )
+pos = 51
 
 [node name="POS52" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -160, 32 )
+pos = 52
 
 [node name="POS53" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -96.0001, 32 )
+pos = 53
 
 [node name="POS54" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -32.0001, 32 )
+pos = 54
 
 [node name="POS55" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 31.9999, 32 )
+pos = 55
 
 [node name="POS56" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 95.9999, 32 )
+pos = 56
 
 [node name="POS57" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 160, 32 )
+pos = 57
 
 [node name="POS58" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 224, 32 )
+pos = 58
 
 [node name="POS59" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 288, 32 )
+pos = 59
 
 [node name="POS60" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -288, 96 )
+pos = 60
 
 [node name="POS61" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -224, 96 )
+pos = 61
 
 [node name="POS62" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -160, 96 )
+pos = 62
 
 [node name="POS63" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -96.0001, 96 )
+pos = 63
 
 [node name="POS64" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -32.0001, 96 )
+pos = 64
 
 [node name="POS65" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 31.9999, 96 )
+pos = 65
 
 [node name="POS66" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 95.9999, 96 )
+pos = 66
 
 [node name="POS67" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 160, 96 )
+pos = 67
 
 [node name="POS68" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 224, 96 )
+pos = 68
 
 [node name="POS69" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 288, 96 )
+pos = 69
 
 [node name="POS70" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -288, 160 )
+pos = 70
 
 [node name="POS71" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -224, 160 )
+pos = 71
 
 [node name="POS72" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -160, 160 )
+pos = 72
 
 [node name="POS73" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -96.0001, 160 )
+pos = 73
 
 [node name="POS74" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -32.0001, 160 )
+pos = 74
 
 [node name="POS75" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 31.9999, 160 )
+pos = 75
 
 [node name="POS76" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 95.9999, 160 )
+pos = 76
 
 [node name="POS77" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 160, 160 )
+pos = 77
 
 [node name="POS78" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 224, 160 )
+pos = 78
 
 [node name="POS79" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 288, 160 )
+pos = 79
 
 [node name="POS80" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -288, 224 )
+pos = 80
 
 [node name="POS81" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -224, 224 )
+pos = 81
 
 [node name="POS82" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -160, 224 )
+pos = 82
 
 [node name="POS83" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -96.0001, 224 )
+pos = 83
 
 [node name="POS84" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -32.0001, 224 )
+pos = 84
 
 [node name="POS85" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 31.9999, 224 )
+pos = 85
 
 [node name="POS86" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 95.9999, 224 )
+pos = 86
 
 [node name="POS87" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 160, 224 )
+pos = 87
 
 [node name="POS88" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 224, 224 )
+pos = 88
 
 [node name="POS89" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 288, 224 )
+pos = 89
 
 [node name="POS90" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -288, 288 )
+pos = 90
 
 [node name="POS91" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -224, 288 )
+pos = 91
 
 [node name="POS92" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -160, 288 )
+pos = 92
 
 [node name="POS93" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -96.0001, 288 )
+pos = 93
 
 [node name="POS94" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( -32.0001, 288 )
+pos = 94
 
 [node name="POS95" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 31.9999, 288 )
+pos = 95
 
 [node name="POS96" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 95.9999, 288 )
+pos = 96
 
 [node name="POS97" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 160, 288 )
+pos = 97
 
 [node name="POS98" parent="Grid" instance=ExtResource( 5 )]
-position = Vector2( 224, 288 )
+position = Vector2( 224, 280 )
+pos = 98
 
 [node name="POS99" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 288, 288 )
+pos = 99
 
 [node name="PlayWithPlayer" type="Button" parent="."]
 anchor_right = 100.0
@@ -438,3 +540,6 @@ rect_scale = Vector2( 2, 2 )
 text = "EXIT"
 align = 1
 valign = 1
+[connection signal="gui_input" from="Restart" to="." method="_on_Restart_gui_input"]
+[connection signal="mouse_entered" from="Restart" to="." method="_on_Restart_mouse_entered"]
+[connection signal="mouse_exited" from="Restart" to="." method="_on_Restart_mouse_exited"]

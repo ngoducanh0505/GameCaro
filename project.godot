@@ -19,6 +19,10 @@ config/name="game708"
 run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Game="*res://Game.gd"
+
 [display]
 
 window/size/width=1280
