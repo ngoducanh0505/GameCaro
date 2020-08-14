@@ -1,5 +1,7 @@
 extends Node2D
 
+onready var game_won = preload("res://GameWon.tscn")
+
 onready var checker_dict = {
 	"row_one":[0,1,2,3,4,5,6,7,8,9],
 	"row_two":[10,11,12,13,14,15,16,17,18,19],
@@ -43,7 +45,7 @@ onready var checker_dict = {
 	"dia_twenty" : [39,48,57,66,75,84,93],
 	"dia_twenty_one" : [49,58,67,76,85,94],
 	"dia_twenty_two" : [59,68,77,86,95]
-	asdc
+	
 	
 	
 }
@@ -51,6 +53,10 @@ onready var checker_dict = {
 var data_store = []
 var win =false
 	
+#function to get the main node
+func get_main_node():
+	var root = get_tree().get_root()
+	return root.get_child(root.get_child_count() - 1)
 
 func _ready():
 	reset_data_store()
@@ -94,7 +100,23 @@ func check_win(pos, letter):
 			tally = 0
 			
 	if(win):
-		print("won")
+		won_game(checker_dict[key])
+
+
+func won_game(win_key):
+	var inst = game_won.instance()
+	var node = "POS" + String(win_key[4])
+	inst.position = get_main_node().get_node("Grid//" + node).global_position
+	var diff = win_key[4] - win_key[0]
+	match diff:
+		36:
+			inst. rotation = deg2rad(-45)
+		44:
+			inst. rotation = deg2rad(45)
+		40:
+			inst. rotation = deg2rad(90)
+	
+	get_main_node().add_child(inst)
 
 func _process(delta):
 	if(Input.is_key_pressed(KEY_ENTER)):

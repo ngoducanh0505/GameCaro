@@ -540,6 +540,9 @@ rect_scale = Vector2( 2, 2 )
 text = "EXIT"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="gui_input" from="Restart" to="." method="_on_Restart_gui_input"]
 [connection signal="mouse_entered" from="Restart" to="." method="_on_Restart_mouse_entered"]
 [connection signal="mouse_exited" from="Restart" to="." method="_on_Restart_mouse_exited"]
