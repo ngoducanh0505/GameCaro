@@ -49,7 +49,8 @@ onready var checker_dict = {
 	
 	
 }
-
+var possible_win_x = []
+var possible_win_o = []
 var data_store = []
 var win =false
 	
@@ -96,6 +97,12 @@ func check_win(pos, letter):
 		if(tally == 5):
 			win = true
 			break
+		elif(tally == 3):
+			if(letter == "x"):
+				possible_win_x.append(key)
+			else:
+				possible_win_o.append(key)
+			tally = 0
 		else:
 			tally = 0
 			
@@ -118,8 +125,110 @@ func won_game(win_key):
 	
 	get_main_node().add_child(inst)
 
+
+func play_winning_move():
+	var played_winning_move = false
+	var played_pos = -1
+	var key_to_remove = -1        #sometimes once possible wins are stored, that possition might be taken by other player and no longer useful
+	
+	  #all possible win outcomes are stored in possible_win_o array.
+	if(possible_win_o.size() > 0):
+		#this means there is a winning possibility
+		for i in range(0, possible_win_o.size()):
+			#go through all those possibilities
+			for j in range(0, checker_dict[possible_win_o[i]].size()):
+				#go through all the positions in those possibilities
+				if(data_store[checker_dict[possible_win_o[i]][j]] == "--"):
+					#if a possition is empty
+					played_pos = checker_dict[possible_win_o[i]][j]    #that should be the position to play
+					key_to_remove = i
+					#now lets find that node for that particular pos to play
+					var node = "POS" + String(played_pos)
+					get_main_node().get_node("Grid/" + node).play_o()
+					played_winning_move = true
+					
+				if(played_winning_move):
+					return played_winning_move
+					
+		if(key_to_remove != -1):
+			possible_win_o.remove(key_to_remove)
+		else:
+			possible_win_o = []
+			
+	return played_winning_move       #in case it's false
+
+
+func block_players_win():
+	#same as play_winning_move() but concers the winning possibilites of x, i.e., possible_win_x array
+	var blocked_player = false
+	var played_pos = -1
+	var key_to_remove = -1        #sometimes once possible wins are stored, that possition might be taken by other player and no longer useful
+	
+	  #all possible win outcomes are stored in possible_win_o array.
+	if(possible_win_x.size() > 0):
+		#this means there is a winning possibility
+		for i in range(0, possible_win_x.size()):
+			#go through all those possibilities
+			for j in range(0, checker_dict[possible_win_x[i]].size()):
+				#go through all the positions in those possibilities
+				if(data_store[checker_dict[possible_win_x[i]][j]] == "--"):
+					#if a possition is empty
+					played_pos = checker_dict[possible_win_x[i]][j]    #that should be the position to play
+					key_to_remove = i
+					#now lets find that node for that particular pos to play
+					var node = "POS" + String(played_pos)
+					get_main_node().get_node("Grid/" + node).play_o()
+					blocked_player = true
+					
+				if(blocked_player):
+					return blocked_player
+					
+		if(key_to_remove != -1):
+			possible_win_x.remove(key_to_remove)
+		else:
+			possible_win_x = []
+			
+	return blocked_player      #in case it's false
+
+
+func check_for_draw():
+	var draw = true
+	for i in range(0, data_store.size()):
+		if(data_store[i] == "--"):
+			draw = false     #if one of them is empty, it's not draw
+	return draw
+
+func play_computer():
+	var won_by_comp = play_winning_move()                #first priority
+	if(won_by_comp):
+		return                                    #game end
+	
+	var blocked_players_win = block_players_win()                #second
+	if(blocked_players_win):
+		return                          #no other move needed
+
+
+	var draw = check_for_draw()                   #third
+	if(draw):
+		return                     #it's like stalemate. Nothing to do 
+
+	#if nothing, take a random pos and play
+	var can_take_pos = false    #boolean to check if that particular position can be taken
+	while(!can_take_pos):
+		#as long as that position cannot be taken we need another random pos
+		var pos = randi()%99
+		if(data_store[pos] == "--"):
+			can_take_pos = true
+			var node = "POS" + String(pos)
+			get_main_node().get_node("Grid/" + node).play_o()
+
 func _process(delta):
 	if(Input.is_key_pressed(KEY_ENTER)):
-		get_tree().reload_current_scene()
+		possible_win_o = []
+		possible_win_x = []
 		reset_data_store()
-
+		get_tree().reload_current_scene()
+		
+		
+	if(Input.is_action_just_pressed("ui_select")):    #for  testing press space
+		play_computer()
