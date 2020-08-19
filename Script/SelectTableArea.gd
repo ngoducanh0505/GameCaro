@@ -34,11 +34,15 @@ func play_o():
 
 func _on_POS_input_event(viewport, event, shape_idx):
 	if(event is InputEventMouseButton and event.pressed):      #event is triggered twice. Once on mouse button down and one when it gone up
-		if(event.button_index == BUTTON_LEFT):
-			play_x()
-			Game.play_computer()
-#		else:
-#			play_o()
-#			$mouse_over.hide()
-#			selected = true
+			if(event.button_index == BUTTON_LEFT):
+				play_x()
+				Game.play_computer()
+#			if(event.button_index == BUTTON_RIGHT):
+			else:
+				play_o()
+				$mouse_over.hide()
+				selected = true
+				
+				
+			
 

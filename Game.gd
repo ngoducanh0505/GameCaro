@@ -160,7 +160,7 @@ onready var checker_dict = {
 	"dia_ten1" : [15,26,37,48,59],
 	"dia_eleven" : [5,16,27,38,49],
 	"dia_twelve" : [4,13,22,31,40],
-	"dia_thirteen" : [5,14,23,32,41,50],
+	"dia_thirteen" : [5,14,23,32,41],
 	"dia_thirteen1" : [14,23,32,41,50],
 	"dia_fourteen" : [6,15,24,33,42],
 	"dia_fourteen1" : [15,24,33,42,51],
@@ -197,6 +197,7 @@ onready var checker_dict = {
 	"dia_twenty_two" : [59,68,77,86,95]
 	
 }
+var selected = false
 var possible_win_x = []
 var possible_win_o = []
 var data_store = []
@@ -213,10 +214,8 @@ func _ready():
 
 func reset_data_store():
 	win = false
-	for i in range(0,99):
+	for i in range(0,2000):
 		data_store.append("--")
-	var i = 0
-	check_for_draw()
 
 
 
@@ -382,7 +381,3 @@ func _process(delta):
 		
 	if(Input.is_action_just_pressed("ui_select")):    #for  testing press space
 		play_computer()
-
-
-func _on_PlayWithPlayer_pressed():
-	pass # Replace with function body.
