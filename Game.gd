@@ -201,7 +201,7 @@ var selected = false
 var possible_win_x = []
 var possible_win_o = []
 var data_store = []
-var win =false
+var win = false
 	
 #function to get the main node
 func get_main_node():
@@ -213,8 +213,8 @@ func _ready():
 	pass
 
 func reset_data_store():
-	win = false
-	for i in range(0,2000):
+	data_store = []
+	for i in range(0,1000):
 		data_store.append("--")
 
 
