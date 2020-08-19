@@ -196,8 +196,6 @@ onready var checker_dict = {
 	"dia_twenty_one1" : [58,67,76,85,94],
 	"dia_twenty_two" : [59,68,77,86,95]
 	
-	
-	
 }
 var possible_win_x = []
 var possible_win_o = []
@@ -215,8 +213,10 @@ func _ready():
 
 func reset_data_store():
 	win = false
-	for i in range(0,2000):
+	for i in range(0,99):
 		data_store.append("--")
+	var i = 0
+	check_for_draw()
 
 
 
@@ -382,3 +382,7 @@ func _process(delta):
 		
 	if(Input.is_action_just_pressed("ui_select")):    #for  testing press space
 		play_computer()
+
+
+func _on_PlayWithPlayer_pressed():
+	pass # Replace with function body.
