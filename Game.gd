@@ -213,6 +213,7 @@ func _ready():
 	pass
 
 func reset_data_store():
+	win = false
 	data_store = []
 	for i in range(0,1000):
 		data_store.append("--")
@@ -377,6 +378,7 @@ func _process(delta):
 		possible_win_x = []
 		reset_data_store()
 		get_tree().reload_current_scene()
+		
 		
 		
 	if(Input.is_action_just_pressed("ui_select")):    #for  testing press space

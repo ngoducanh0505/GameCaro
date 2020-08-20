@@ -520,6 +520,3 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="gui_input" from="PlayWithPlayer" to="." method="_on_PlayWithPlayer_gui_input"]
-[connection signal="gui_input" from="Restart" to="." method="_on_Restart_gui_input"]
-[connection signal="mouse_entered" from="Restart" to="." method="_on_Restart_mouse_entered"]
-[connection signal="mouse_exited" from="Restart" to="." method="_on_Restart_mouse_exited"]
